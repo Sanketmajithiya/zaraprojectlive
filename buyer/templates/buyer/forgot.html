@@ -2,6 +2,8 @@
 {% load static %}
 {% block title %}Login{% endblock %}
 {% block styles %}
+
+<link href="{% static 'buyer/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -29,6 +31,10 @@
         border: 1px solid #ccc;
         border-radius: 5px;
         box-sizing: border-box;
+        margin: 20px 0;
+    }
+    input[type="email"]::placeholder{
+        color: gray;
     }
 
     .forgot-password-form button {
@@ -57,6 +63,11 @@
     .space{
         height: 550px;
         align-content: center;
+
+    }
+     h2{
+        font-size: 24px;
+        text-align: center;
     }
 </style>
 {% endblock %}
@@ -66,12 +77,12 @@
 <!DOCTYPE html>
 <body>
     <div class="space">
-    <div class="forgot-password-form">
-        <h2>Forgot Password</h2>
+        <div class="forgot-password-form">
+            <h2>Forgot Password</h2>
         <form method="post" class="form">
             {% csrf_token %}
-            <label for="email">Enter your email address:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <input type="email" id="email" name="email" placeholder="Enter your email" required p >
             <button type="submit">Submit</button>
         </form>
         <div class="login-link">
@@ -82,32 +93,20 @@
 </body>
 </html>
 
-{% comment %} <section class="vh-100">
-    <h1 class="display-6 fw-bold text-center text-dark my-3">Forgot your password</h1>
-    <div class="container-fluid h-custom my-5">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-md-8 col-lg-6 col-xl-4 ">
-                <form action="{% url 'forgot_password_view' %}" method="post">
-                {% csrf_token %}
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form3Example3">Email address</label>
-                        <input type="email" id="form3Example3" class="form-control form-control-lg" name="email"
-                            placeholder="Example@gmail.com" />
-                    </div>
+<div class="colorlibcopy-agile">
+    <p> <a href="https://colorlib.com/" target="_blank">ZARA</a></p>
+</div>
 
-                    <div class="text-center text-lg-start mt-4 pt-2">
-                        <button type="submit" class="btn btn-primary btn-lg"
-                            style="padding-left: 2.5rem; padding-right: 2.5rem;">Submit</button>
-                        <p class="small fw-bold mt-2 pt-1 mb-0">Already an account? <a href="{% url 'login_view' %}"
-                                class="link-danger">Login</a></p>
-                    </div>
-
-                </form>
-            </div>
-            
-        </div>
-    </div>
-
-</section> {% endcomment %}
+<ul class="colorlib-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
 {% endblock %}

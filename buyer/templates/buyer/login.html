@@ -4,6 +4,8 @@
 Log In
 {% endblock%}
 {% block styles %}
+
+<link href="{% static 'buyer/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -18,6 +20,15 @@ Log In
         max-width: 400px;
         margin: 0 auto;
     }
+    input[type="email"]::placeholder{
+        color: gray;
+    }
+
+    
+    input[type="Password"]::placeholder{
+        color: gray;
+    }
+
 
     .login-form label {
         display: block;
@@ -50,7 +61,7 @@ Log In
 
     .forgot-password-link {
         text-align: center;
-        margin-top: 10px;
+        margin: 20px 0;
     }
 
     .forgot-password-link a {
@@ -67,6 +78,11 @@ Log In
     .color{
       color:blue;
     }
+    h2{
+        font-size: 24px;
+        text-align: center;
+    }
+
 </style>
 {% endblock %}
 {% block body %}
@@ -94,6 +110,24 @@ Log In
 </div>
 </body>
 </html>
+
+
+<div class="colorlibcopy-agile">
+    <p> <a href="https://colorlib.com/" target="_blank">ZARA</a></p>
+</div>
+
+<ul class="colorlib-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
 
 
 {% endblock %}
